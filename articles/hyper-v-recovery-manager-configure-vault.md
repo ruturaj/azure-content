@@ -250,3 +250,13 @@ Test your deployment to make sure virtual machines and data fail over as expecte
 <LI>To plan and deploy Azure Site Recovery in a full production environment, see <a href="http://go.microsoft.com/fwlink/?LinkId=321294">Planning Guide for Azure Site Recovery</a> and <a href="http://go.microsoft.com/fwlink/?LinkId=321295">Deployment Guide for Azure Site Recovery</a>.</LI>
 <LI>For questions, visit the <a href="http://go.microsoft.com/fwlink/?LinkId=313628">Azure Recovery Services Forum</a>.</LI> 
 </UL>
+
+# This is a heading
+## and a sub heating
+
+* list one
+* list 2
+
+1. this is great
+1. this is also great
+1. this is very much great
