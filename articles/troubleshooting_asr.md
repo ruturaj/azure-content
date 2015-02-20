@@ -444,9 +444,9 @@ http://go.microsoft.com/fwlink/?LinkId=398534.
 
 <span id="Error_code_Service_Error_code_70095_Prov"
 class="anchor"></span>\
-**Error code:**  Service Error code:  70095     Provider error code:
-31313\
-\
-**Resolution:**  Install the ASR Agent on the specified host. 
+
+Error code: Service Error code:  70095     Provider error code:31313
+
+Resolution: Install the ASR Agent on the specified host. 
 See [http://msdn.microsoft.com/en-us/library/dn788913.aspx ![](media/image1.png) ](http://msdn.microsoft.com/en-us/library/dn788913.aspx)for
 more details
