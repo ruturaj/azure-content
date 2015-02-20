@@ -1,25 +1,4 @@
-<properties 
-	pageTitle="Troubleshooting guide for Azure Site Recovery" 
-	description="Azure Site Recovery coordinates the replication, failover and recovery of Hyper-V virtual machines located in on-premises VMM clouds to Azure." 
-	editor="jimbe" 
-	manager="jwhit" 
-	authors="ruturaj"/>
-
-<tags 
-	ms.service="site-recovery" 
-	ms.workload="backup-recovery" 
-	ms.tgt_pltfrm="na" 
-	ms.devlang="na" 
-	ms.topic="article" 
-	ms.date="20/2/2015" 
-	ms.author="ruturaj"/>
-
-# Troubleshooting guide for Azure Site Recovery
-
-This document lists the most common errors and details the resolution steps for each of them.
-
-
-<h2>Setup</h2>
+Setup
 
 -   The selected certificate cannot be validated. Please select a
     different certificate.
@@ -33,7 +12,7 @@ This document lists the most common errors and details the resolution steps for 
     vault. Verify the proxy settings or try again
     later.](http://social.technet.microsoft.com/wiki/contents/articles/25571.a-connection-cant-be-established-to-the-hyper-v-recovery-manager-vault-verify-the-proxy-settings-or-try-again-later.aspx)
 
-<h2><span id="Configuration" class="anchor"></span>Configuration</h2>
+<span id="Configuration" class="anchor"></span>Configuration
 
 -   Hyper-V host cluster contains at least one static network adapter,
     or no connected adapters are configured to use DHCP
@@ -46,7 +25,7 @@ This document lists the most common errors and details the resolution steps for 
     cloud protection isn't
     configured.](http://social.technet.microsoft.com/wiki/contents/articles/25500.protection-configuration-for-cloudname-couldn-t-be-applied-a-newly-added-hyper-v-host-or-cluster-couldn-t-be-configured-because-cloud-protection-isn-t-configured.aspx)
 
-<h2><span id="Protection" class="anchor"></span>Protection</h2>
+<span id="Protection" class="anchor"></span>Protection
 
 -   A suitable host for the replica virtual machine can't be found - Due
     to low compute resources
@@ -55,7 +34,7 @@ This document lists the most common errors and details the resolution steps for 
     Due to no logical network
     attached](http://social.technet.microsoft.com/wiki/contents/articles/25502.a-suitable-host-for-the-replica-virtual-machine-can-t-be-found-due-to-no-logical-network-attached.aspx)
 
-<h2><span id="Recovery" class="anchor"></span>Recovery</h2>
+<span id="Recovery" class="anchor"></span>Recovery
 
 -   **VMM cannot complete the host operation** -
 
@@ -91,10 +70,10 @@ This document lists the most common errors and details the resolution steps for 
 -   [Virtual machine is not running and is not powered
     off](http://social.technet.microsoft.com/wiki/contents/articles/25510.virtual-machine-is-not-running-and-is-not-powered-off.aspx)
 
-<h2><span id="Miscellaneous" class="anchor"></span>Miscellaneous </h2>
+<span id="Miscellaneous" class="anchor"></span>Miscellaneous 
 
-<h4>Error message: The selected certificate cannot be validated. Please select a different certificate.       </h4>
-
+Error message: The selected certificate cannot be validated. Please select a different certificate.       
+----------------------------------------------------------------------------------------------------------
 
 Error code :
 
@@ -114,8 +93,8 @@ authority. The certificate must also not be revoked and must be within
 its validity period. For more information, see How to Fix Error ACS50017
 .
 
-<h4>Error message: The VMM server cannot be registered due to an internal error.</h4>
-
+Error message: The VMM server cannot be registered due to an internal error.
+--------------------------------------------------------------------------------
 The VMM server cannot be registered due to an internal error. Please refer to the jobs view in the Site Recovery Portal for more details on the error. Run Setup again to register the server.
 
 Error code :
@@ -129,7 +108,8 @@ or SOAP action. See InnerException, if present, for more details.
 
 Retry registration by re-running setup to fix this error.
 
-<h4>Error message: A connection can’t be established to the Hyper-V Recovery Manager vault. Verify the proxy settings or try again later.</h4>
+Error message: A connection can’t be established to the Hyper-V Recovery Manager vault. Verify the proxy settings or try again later.
+-------------------------------------------------------------------------------------------------------------------------------------
 
 Error code :
 
@@ -141,8 +121,8 @@ If internet connectivity exists, the failure may be caused by an
 internal server error. Retry registration by re-running setup in this
 case.
 
-<h4>Error Message: The virtual machine must have exactly one disk specified as the operating system disk.</h4>
-
+Error Message: The virtual machine must have exactly one disk specified as the operating system disk.
+-------------------------------------------------------------------------------------------------------
 Error code:  70003 
 
 Resolution:
@@ -151,8 +131,8 @@ Service couldn't find the virtual machine OS from VMM server. Ensure
 that the 'Operating System' setting is configured in the 'General' tab
 for the virtual machine properties in the VMM console.
 
-<h4>Error Message: The operating system of the virtual machine OS isn't supported. The operation system must be Windows (Windows Server 2008 R2 and later versions) or Linux. </h4>
-
+Error Message: The operating system of the virtual machine OS isn't supported. The operation system must be Windows (Windows Server 2008 R2 and later versions) or Linux. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Error code:  70002
 
 Resolution:
@@ -163,8 +143,8 @@ system for the virtual machine' which contains the operating system for
 the virtual machine in 'Hardware Configuration' tab for the virtual
 machine properties in the VMM console, and retry the operation.
 
-<h4>Error Message: A suitable host for the replica virtual machine can't be found.</h4>
-
+Error Message: A suitable host for the replica virtual machine can't be found.
+------------------------------------------------------------------------------------------------
 Zero ratings: Not enough memory available. Total memory on the host is 0
 MB. Remaining memory for use by existing and new virtual machines is 0
 MB. At the time of valuation, the remaining memory was 0 MB and the
@@ -187,7 +167,8 @@ doesn’t have a Hyper-V host with free memory. Make sure that the
 recovery cloud has Hyper-V hosts with enough resources available for
 replication and that protection is enabled for the virtual machine.
 
-<h4>Error Message: A suitable host for the replica virtual machine can't be found.</h4> 
+Error Message: A suitable host for the replica virtual machine can't be found. 
+-------------------------------------------------------------------------------
 
 Error:  host1.contoso.com Zero ratings: The virtual machine or tier load
 balancer configuration requires an IP pool and there are no appropriate
@@ -224,8 +205,8 @@ You can do so by
 10. Go to Logical Network tab
 11. Ensure that the appropriate logical network is selected
 
-<h4>Error Message : VMM cannot complete the host operation on the host.contoso.com server</h4> 
-
+Error Message : VMM cannot complete the host operation on the host.contoso.com server 
+------------------------------------------------------------------------------------------
 error: Hyper-V failed to fail over to the
 selected recovery point for 'sharepoint-vm1': General access denied
 error. Try a more recent recovery point. (0x80070005). (Virtual machine
@@ -242,8 +223,8 @@ Resolution:
 
 Failover on the replica virtual machine couldn't be initiated due to access issues.
 
-<h4>Error message: VMM cannot complete the host operation on the host1.contoso.com server</h4>
-
+Error message: VMM cannot complete the host operation on the host1.contoso.com server
+----------------------------------------------------------------------------------------
 
 Hyper-V failed to enable reverse replication for 'SHAREPOINT-VM1': A
 connection with the server could not be established (0x00002EFD).
@@ -262,7 +243,8 @@ The virtual machine couldn't begin reverse replication.
 Reverse replication can fail if the protecting location isn't ready to
 receive the replication data from the protected location.
 
-<h4>Error Message: VMM cannot complete the host operation on the Host5.contoso.com server</h4>
+Error Message: VMM cannot complete the host operation on the Host5.contoso.com server
+----------------------------------------------------------------------------------------
 
 Hyper-V failed to enable replication for virtual machine
 'SHAREPOINT-VM1': A connection with the server could not be established
@@ -283,7 +265,8 @@ host is not able to connect to the recovery Hyper-V host. Ensure that
 the network firewall is configured so that Hyper-V host machines can
 communicate with each other over port 8084.
 
-<h4>Error Message: VMM cannot complete the host operation on the host1.contoso.com</h4> 
+Error Message: VMM cannot complete the host operation on the host1.contoso.com 
+---------------------------------------------------------------------------------
 
 Could not commit failover for virtual machine 'SHAREPOINT-VM1'. (Virtual
 machine ID XXXXXXX-DCEE-XXXX-XXXX-1DC00586XXXX) Replication task 'Commit
@@ -301,7 +284,8 @@ virtual machine is in replicating state. An operation has happened out
 of the band and HRM service is not in sync with the on premise
 replication state.
 
-<h4>Error Message: VMM cannot complete the host operation on the host1.contoso.com server</h4>
+Error Message: VMM cannot complete the host operation on the host1.contoso.com server
+-----------------------------------------------------------------------------------------
 
 Hyper-V failed to fail over to the selected recovery point for
 'SHAREPOINT-VM1': Operation aborted Try a more recent recovery point.
@@ -322,8 +306,8 @@ Failover of the virtual machine failed because the test
 failover of the virtual machine is in progress. Complete the test
 failover and then retry the operation.
 
-<h4>Error Message: The recovery plan contains virtual machines which are not ready for planned failover.</h4>
-
+Error Message: The recovery plan contains virtual machines which are not ready for planned failover.
+------------------------------------------------------------------------------------------------------------
 Error code: Service error code: 25014 
 Resolution: Ensure that the virtual machines that are part of the
 recovery plan have completed Enable Protection. Go the virtual machine
@@ -331,8 +315,8 @@ view in the portal and ensure that the virtual machines are in a
 Replication Status - "Protected – OK" and "Failover Status" - "Ready".
 Once confirmed, try the operation again.
 
-<h4>Error Message: The virtual machine isn't ready for planned failover.</h4>
-
+Error Message: The virtual machine isn't ready for planned failover.
+-------------------------------------------------------------------------------
 
 Error code: Service error code: 25007 
 
@@ -343,7 +327,8 @@ that the virtual machines are in a Replication Status - "Protected – OK"
 and "Failover Status" - "Ready". Once confirmed, try the operation
 again.
 
-<h4>Error Message: Virtual machine sharepoint-vm1 is not running and is not powered off.</h4>
+Error Message: Virtual machine sharepoint-vm1 is not running and is not powered off.
+-------------------------------------------------------------------------------------
 
 Error code: Service error code: 25016
 
@@ -352,16 +337,16 @@ machine because the virtual machine is in a state from which shutdown
 can’t be triggered. Ensure that the virtual machine in an appropriate
 state for shutdown, then retry the operation.
 
-<h4>Error Message: The Hyper-V profile isn't enabled in the Capability Profiles for cloud CHICAGOCLOUD.</h4>
-
+Error Message: The Hyper-V profile isn't enabled in the Capability Profiles for cloud CHICAGOCLOUD.
+----------------------------------------------------------------------------------------------------
 Error code: Service error code: 10003
 
 Resolution:
 Enable the Hyper-V profile in the Capability Profiles
 for the cloud, or select another cloud with this capability enabled.
 
-<h4>Error Message: Hyper-V host cluster HRMBROKER01.contoso.com contains at least one static network adapter, or no connected adapters are configured to use DHCP.</h4>
-
+Error Message: Hyper-V host cluster HRMBROKER01.contoso.com contains at least one static network adapter, or no connected adapters are configured to use DHCP.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Error code: Service error code: 10003     Provider error code: 12700 
 
 Resolution:
@@ -370,8 +355,8 @@ Create a Hyper-V Replica broker resource manually
 and retry the operation. Please check the steps required to create a
 Hyper-V Replica broker [here ![](media/image1.png)](http://blogs.technet.com/b/virtualization/archive/2012/08/15/configuring-hyper-v-replica-broker-using-powershell.aspx)
 
-<h4>Error Message: Hyper-V host cluster %DRAClusterName; contains at least one static network adapter, or no connected adapters are configured to use DHCP.</h4>
-
+Error Message: Hyper-V host cluster %DRAClusterName; contains at least one static network adapter, or no connected adapters are configured to use DHCP.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 Error code: Service error code: 67508     Provider error code:31207
 
 Resolution:
@@ -380,7 +365,8 @@ Create a replica broker manually and retry the
 operation. Please check the steps required to create a Hyper-V Replica
 broker [here ![](media/image1.png)](http://blogs.technet.com/b/virtualization/archive/2012/08/15/configuring-hyper-v-replica-broker-using-powershell.aspx)
 
-<h4>Error Message: VMM does not have appropriate permissions to access the resource</h4> 
+Error Message: VMM does not have appropriate permissions to access the resource 
+--------------------------------------------------------------------------------
 
 Error occured which is getting recorded. | Params: {ErrorCode = 10003}
 {WorkflowName = } {WorkflowId = 03e73e93-ea82-4765-956f-1a11d300ec0f}
@@ -407,7 +393,8 @@ host has an updated password. Change the Run-As Account password to the
 latest password and retry the operation.
 
 
-<h4>Error Message: Protection couldn't be enabled for the virtual machine.</h4>
+Error Message: Protection couldn't be enabled for the virtual machine.
+-------------------------------------------------------------------------------
 
 The virtual machine isn't a generation-1 virtual machine.
 Recommendation Configure the virtual machine as generation-1 and then retry the operation.
@@ -421,7 +408,8 @@ will need to configure the VM as a Gen 1 VM to enable protection.
 
 
 
-<h4>Error Message:  The requested action couldn't be performed by the 'Hyper-V Replica To Azure' Replication Provider</h4>
+Error Message:  The requested action couldn't be performed by the 'Hyper-V Replica To Azure' Replication Provider
+-----------------------------------------------------------------------------------------------------------------
 
 (Error code: 539)
 Possible causes The Provider action failed. Check other errors for more
@@ -444,7 +432,8 @@ them.  Configure the resource name in source and target properties under
 Recovery Services\\\<Vault Name\>\\Protected Items\\\<Cloud Name\>\\\<VM
 Name - e.g. "Server WithSpace"\>
 
-<h4>Error Message: Enabling protection couldn't be completed for the virtual machine.</h4>
+Error Message: Enabling protection couldn't be completed for the virtual machine.
+----------------------------------------------------------------------------------------
 
 Provider error: The Microsoft Azure Recovery Services Agent isn't
 installed on the Hyper-V host server hv07.contoso.com.\
