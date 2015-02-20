@@ -443,7 +443,7 @@ Recommendation: Manually clear protection settings. For details see
 http://go.microsoft.com/fwlink/?LinkId=398534.
 
 <span id="Error_code_Service_Error_code_70095_Prov"
-class="anchor"></span>\
+class="anchor"></span>
 
 Error code: Service Error code:  70095     Provider error code:31313
 
