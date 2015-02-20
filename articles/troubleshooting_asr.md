@@ -77,7 +77,7 @@ Error message: The selected certificate cannot be validated. Please select a dif
 
 Error code :
 
-#### Resolution
+Resolution
 
 ACS50008 SAML token is invalid. (There may be more details in the
 message).To fix this error ensure that the system time of the operating
@@ -98,7 +98,7 @@ Error message: The VMM server cannot be registered due to an internal error. Ple
 
 Error code :
 
-#### Resolution
+Resolution
 
 There was no endpoint listening at
 https://pod01-id1.ea.backup.windowsazure.com/IdmgmtService.svc that
@@ -114,7 +114,7 @@ Error message: A connection can’t be established to the Hyper-V Recovery Manag
 
 Error code :
 
-#### Resolution
+Resolution
 
 This error can occur if there is no internet connectivity. Check the
 proxy settings.
@@ -133,13 +133,10 @@ Service couldn't find the virtual machine OS from VMM server. Ensure
 that the 'Operating System' setting is configured in the 'General' tab
 for the virtual machine properties in the VMM console.
 
-### \
-\
-Error Message: The operating system of the virtual machine OS isn't supported. The operation system must be Windows (Windows Server 2008 R2 and later versions) or Linux. 
+###Error Message: The operating system of the virtual machine OS isn't supported. The operation system must be Windows (Windows Server 2008 R2 and later versions) or Linux. 
 
-Error code:  70002 \
+Error code:  70002
 Resolution
-
 Service couldn't find the virtual machine hard-disk which contains the
 OS from VMM server. Configure only one disk as 'Contains the operating
 system for the virtual machine' which contains the operating system for
@@ -147,12 +144,12 @@ the virtual machine in 'Hardware Configuration' tab for the virtual
 machine properties in the VMM console, and retry the operation.
 
 Error Message: A suitable host for the replica virtual machine can't be
-found. \
+found.
 Zero ratings: Not enough memory available. Total memory on the host is 0
 MB. Remaining memory for use by existing and new virtual machines is 0
 MB. At the time of valuation, the remaining memory was 0 MB and the
-amount requested by this virtual machine was 576 MB. ()\
-\
+amount requested by this virtual machine was 576 MB. ()
+
 Deployment errors: Configuration issues related to the virtual machine
 [57422422-74c5-49ea-9a5d-d1fab11369e9] prevent deployment and must be
 resolved before deployment can continue. (Get ratings for the virtual
@@ -160,8 +157,8 @@ machine to determine an appropriate host and try the operation again.)
 Add at least one host with Hyper-V replication enabled to the recovery
 cloud. Then try to enable protection for the virtual machine again. 
 
-Error code:  Service error: 40004      Provider error: 31225 \
-\
+Error code:  Service error: 40004      Provider error: 31225 
+
 Resolution
 
 This error indicates that the VMM server is unable to find a Hyper-V
@@ -185,37 +182,27 @@ Deployment errors: Configuration issues related to the NIC with ID
 for the virtual machine to determine an appropriate host and try the
 operation again.) Add at least one host with Hyper-V replication enabled
 to the recovery cloud. Then try to enable protection for the virtual
-machine again. \
-\
-**Error code: ** Service error: 40004     Provider error: 31225 \
-\
-**Resolution: ** Ensure the following: \
-\
+machine again.
+
+**Error code: ** Service error: 40004     Provider error: 31225 
+
+**Resolution: ** Ensure the following:
 The VM network that is mapped to the VM network of the primary virtual
 machine is available to at least one of the hosts of the recovery cloud
 and the corresponding logical network is available to the recovery
-cloud. You can do so by\
-\
-1. Adding Network to Host \
-\
-2. Go to VMM Console \
-\
-3. Right click on host, click on properties \
-\
-4. Go to Hardware tab \
-\
-5. Go to Network Adapters \
-\
-6. Ensure that the appropriate logical network is associated with
-network adapter 7. Adding network to Cloud \
-\
-8. Go to VMM Console \
-\
-9. Right click on cloud, click on properties \
-\
-10. Go to Logical Network tab \
-\
-11.     Ensure that the appropriate logical network is selected
+cloud. You can do so by
+
+1. Adding Network to Host
+2. Go to VMM Console
+3. Right click on host, click on properties
+4. Go to Hardware tab
+5. Go to Network Adapters
+6. Ensure that the appropriate logical network is associated with network adapter 
+7. Adding network to Cloud
+8. Go to VMM Console
+9. Right click on cloud, click on properties 
+10. Go to Logical Network tab
+11. Ensure that the appropriate logical network is selected
 
 Error:          VMM cannot complete the host operation on the
 host.contoso.com server error: Hyper-V failed to fail over to the
